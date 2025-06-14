@@ -1,37 +1,38 @@
-# LogWatch 🔐  
+# LogWatch
+
 > A lightweight Python tool to detect brute-force attacks by analyzing authentication logs.
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)  
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.6%2B-blue.svg)](https://www.python.org/)
 
 LogWatch is a simple yet powerful Python script that scans system authentication logs for repeated failed login attempts. It flags IP addresses that exceed a defined threshold and generates a CSV report for further investigation or banning.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔍 **Log Parsing** – Scans system auth logs (e.g. `/var/log/system.log` on macOS)
-- 🚨 **Attack Detection** – Detects IPs with excessive failed login attempts
-- 📊 **CSV Reports** – Outputs suspicious IPs and attempt counts to `report.csv`
-- ⚙️ **Configurable** – Easy to change thresholds and log file path
-- 📁 **Testable** – Comes with a sample log file for demo/testing
+* Log Parsing – Scans system auth logs (e.g. `/var/log/system.log` on macOS)
+* Attack Detection – Detects IPs with excessive failed login attempts
+* CSV Reports – Outputs suspicious IPs and attempt counts to `report.csv`
+* Configurable – Easy to change thresholds and log file path
+* Testable – Comes with a sample log file for demo/testing
 
 ---
 
-## 👥 Sample Output
+## Sample Output
 
 ```bash
-🔍 Analyzing log file: sample_logs/sample_auth.log
+Analyzing log file: sample_logs/sample_auth.log
 
-🚨 Suspicious IPs:
+Suspicious IPs:
 192.168.1.100 → 5 failed attempts
 
-📁 Report saved to report.csv
+Report saved to report.csv
 ```
 
 ---
 
-## 📆 Project Structure
+## Project Structure
 
 ```
 logwatch/
@@ -51,35 +52,40 @@ logwatch/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/yourusername/logwatch.git
 cd logwatch
 ```
 
 ### 2. Set Up Environment *(Optional but Recommended)*
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
 ### 3. Run the Analyzer
+
 ```bash
 python3 main.py
 ```
 
 > If using a real system log (like `/var/log/system.log`), run with `sudo`:
+
 ```bash
 sudo python3 main.py
 ```
 
 ---
 
-## 🧪 Testing with Sample Logs
+## Testing with Sample Logs
 
 To test without accessing real system logs, the project includes a sample log:
+
 ```python
 # logwatch/config.py
 LOG_PATH = "sample_logs/sample_auth.log"
@@ -89,9 +95,10 @@ Edit this file to point to `sample_logs/sample_auth.log` to simulate detection.
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 Adjust the detection sensitivity in `logwatch/config.py`:
+
 ```python
 LOG_PATH = "/var/log/system.log"  # or your custom test file
 ATTEMPT_THRESHOLD = 5            # Number of failures before flagging an IP
@@ -99,18 +106,19 @@ ATTEMPT_THRESHOLD = 5            # Number of failures before flagging an IP
 
 ---
 
-## 📋 Requirements
+## Requirements
 
 Python 3.6 or above. No external libraries required.
 
 Install dependencies (if you add optional ones like `matplotlib` or `ipinfo`):
+
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ---
 
-## 📄 Example Report (`report.csv`)
+## Example Report (`report.csv`)
 
 ```
 IP Address,Attempts
@@ -120,19 +128,19 @@ IP Address,Attempts
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Pull requests are welcome. Feel free to submit improvements, bug fixes, or feature suggestions. For major changes, please open an issue first.
 
 ---
 
-## 🛡 License
+## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🙇‍♂️ Author
+## Author
 
-**Tejas Tagra** – [hello@tejastagra.com](mailto:hello@tejastagra.com)  
+**Tejas Tagra** – [hello@tejastagra.com](mailto:hello@tejastagra.com)
 Built as a side project to explore security monitoring and log analysis using Python.
