@@ -1,5 +1,7 @@
-from collections import Counter
+# logwatch/config.py
 
-def detect_brute_force(ip_list, threshold):
-    counts = Counter(ip_list)
-    return {ip: c for ip, c in counts.items() if c >= threshold}
+# Path to the system log file (change this to "sample_logs/sample_auth.log" for testing)
+LOG_PATH = "/var/log/system.log"
+
+# Number of failed attempts before flagging an IP as suspicious
+ATTEMPT_THRESHOLD = 5
