@@ -1,0 +1,7 @@
+Jun 14 10:15:32 macbook sshd[12345]: Failed password for invalid user admin from 192.168.1.100 port 22 ssh2
+Jun 14 10:15:33 macbook sshd[12346]: Failed password for invalid user root from 192.168.1.101 port 22 ssh2
+Jun 14 10:15:34 macbook sshd[12347]: Failed password for invalid user admin from 192.168.1.100 port 22 ssh2
+Jun 14 10:15:36 macbook sshd[12348]: Failed password for invalid user guest from 192.168.1.100 port 22 ssh2
+Jun 14 10:15:37 macbook sshd[12349]: Failed password for invalid user test from 192.168.1.100 port 22 ssh2
+Jun 14 10:15:39 macbook sshd[12350]: Failed password for invalid user root from 192.168.1.101 port 22 ssh2
+Jun 14 10:15:40 macbook sshd[12351]: Failed password for invalid user admin from 192.168.1.100 port 22 ssh2

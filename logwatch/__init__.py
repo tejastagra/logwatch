@@ -1,0 +1,1 @@
+# logwatch/__init__.py
